@@ -1,15 +1,15 @@
 install:
-	pip3 install --upgrade pip &&\
-		pip3 install -r requirements.txt
+	pip install --upgrade pip &&\
+		pip install -r requirements.txt
 
 test:
-	python3 -m pytest -vv test_main.py
+	python -m pytest -vv test_main.py
 
 format:
 	black *.py
 
 run:
-	python3 main.py
+	python main.py
 
 run-uvicorn:
 	uvicorn main:app --reload
